@@ -22,7 +22,7 @@ function preload(){
     this.load.image('map', './assets/fondo1.png');
 }
 function create(){
-    this.cameras.main.setBounds(0, 0, 800, 600);
+    this.cameras.main.setBounds(0, 0, 1024, 2048);
     this.add.image(0, 0, 'map').setOrigin(0);
 
 
