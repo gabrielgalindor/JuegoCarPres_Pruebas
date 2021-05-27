@@ -94,23 +94,23 @@ function update(time,delta){
         if(this.cursor.down.isDown)
         {
             this.pany+=1;
-            cam.pan(this.panx,this.pany,20);
+            cam.pan(this.panx,this.pany,40);
         }
         if(this.cursor.up.isDown)
         {
             this.pany-=1;
-            cam.pan(this.panx,this.pany,20);
+            cam.pan(this.panx,this.pany,40);
         }
         //Pan X
         if(this.cursor.left.isDown)
         {
             this.panx-=1;
-            cam.pan(this.panx,this.pany,20);
+            cam.pan(this.panx,this.pany,40);
         }
         if(this.cursor.right.isDown)
         {
             this.panx+=1;
-            cam.pan(this.panx,this.pany,20);
+            cam.pan(this.panx,this.pany,40);
         }
         //this.text.setText(['Click to move', 'x: ' + cam.scrollX, 'y: ' + cam.scrollY ]);
 }
