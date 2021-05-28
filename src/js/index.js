@@ -94,23 +94,35 @@ function update(time,delta){
         if(this.cursor.down.isDown)
         {
             this.pany+=1;
-            cam.pan(this.panx,this.pany,20);
+            
         }
         if(this.cursor.up.isDown)
         {
             this.pany-=1;
-            cam.pan(this.panx,this.pany,20);
+       
         }
         //Pan X
         if(this.cursor.left.isDown)
         {
             this.panx-=1;
-            cam.pan(this.panx,this.pany,20);
+         
         }
         if(this.cursor.right.isDown)
         {
             this.panx+=1;
-            cam.pan(this.panx,this.pany,20);
+           
         }
         //this.text.setText(['Click to move', 'x: ' + cam.scrollX, 'y: ' + cam.scrollY ]);
+
+        if (this.x<0)
+        {
+            this.x=0;
+        }
+
+        if(this.y<0)
+        {
+            this.y=0;
+        }
+        
+        cam.pan(this.panx,this.pany,20);
 }
