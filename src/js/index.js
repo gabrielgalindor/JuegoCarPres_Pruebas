@@ -124,5 +124,5 @@ function update(time,delta){
             this.y=0;
         }
         
-        cam.pan(this.panx,this.pany,40);
+        cam.pan(this.panx,this.pany,20);
 }
