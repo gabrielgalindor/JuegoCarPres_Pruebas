@@ -66,6 +66,6 @@ class escenaLobby extends Phaser.Scene{
             this.y=0;
         }
         
-        cam.pan(this.panx,this.pany,20);
+        cam.pan(this.panx,this.pany,30);
     }
 }
