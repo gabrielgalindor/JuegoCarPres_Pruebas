@@ -5,15 +5,17 @@ class escenaLobby extends Phaser.Scene{
     preload()
     {
         this.load.image('map', './assets/fondo1.png');
+        this.load.atlas('personaje', './assets/sprite1.png','./assets/sprite1atlas.json');
 
     }
     create()
     {
-        alert("Se ha creado la Scena Lobby");
+        
 
         this.cameras.main.setBounds(0, 0, 1024, 2048);
         this.add.image(0, 0, 'map').setOrigin(0);
 
+        this.personaje = this.add.sprite(75,15,"personaje","s0.png").setScale(0.5);
 
         this.cameras.main.setZoom(4);
         this.cameras.main.centerOn(0, 0);
@@ -24,8 +26,21 @@ class escenaLobby extends Phaser.Scene{
         this.text.setShadow(1, 1, '#000000', 2);
         
         this.cursor = this.input.keyboard.createCursorKeys();
-        this.panx = 0;
-        this.pany= 0;
+        this.panx = 5;
+        this.pany= 5;
+
+        this.anims.create({
+            key:'walk',
+            repeat:-1,
+            frameRate:24,
+            frames:this.anims.generateFrameNames('personaje',{
+                prefix:'s',
+                suffix:'.png',
+                start:0,
+                end:2
+            })
+        });
+        
 
 
     }
@@ -36,6 +51,8 @@ class escenaLobby extends Phaser.Scene{
         if(this.cursor.down.isDown)
         {
             this.pany+=1;
+            this.personaje.y+=1;
+            cam.pan(this.panx,this.pany,30);
             
         }
         if(this.cursor.up.isDown)
