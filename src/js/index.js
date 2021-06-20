@@ -14,4 +14,4 @@ const config ={
 var game = new Phaser.Game(config);
 
 //Inicio del juego
-var con = 5;
+var con = 6;
