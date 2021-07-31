@@ -1,0 +1,120 @@
+{
+	"textures": [
+		{
+			"image": "sprite-character1.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 1400,
+				"h": 1080
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "arbol1-0x.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 360,
+						"h": 360
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 360,
+						"h": 360
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 360,
+						"h": 360
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				{
+					"filename": "arbol1-1x.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 360,
+						"h": 360
+					},
+					"spriteSourceSize": {
+						"x": 360,
+						"y": 0,
+						"w": 360,
+						"h": 360
+					},
+					"frame": {
+						"x": 361,
+						"y": 1,
+						"w": 360,
+						"h": 360
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				{
+					"filename": "arbol1-2x.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 360,
+						"h": 360
+					},
+					"spriteSourceSize": {
+						"x": 720,
+						"y": 0,
+						"w": 360,
+						"h": 360
+					},
+					"frame": {
+						"x": 721,
+						"y": 1,
+						"w": 360,
+						"h": 360
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				{
+					"filename": "arbol1-3x.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 360,
+						"h": 360
+					},
+					"spriteSourceSize": {
+						"x": 1080,
+						"y": 0,
+						"w": 360,
+						"h": 360
+					},
+					"frame": {
+						"x": 1081,
+						"y": 1,
+						"w": 360,
+						"h": 360
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:ee78cacc38551445f4ac068d5f89f5bf:6cc19705e7b39b96deecddd16df19941:21e37d97209970b57444d06f2d32a983$"
+	}
+}
