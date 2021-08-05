@@ -14,7 +14,7 @@ class escenaLobby extends Phaser.Scene{
 
         this.cameras.main.setBounds(0, 0, 1024, 2048);
         this.add.image(0, 0, 'map').setOrigin(0);
-
+        //Comentar
         this.personaje = this.add.sprite(75,15,"personaje","s0.png").setScale(0.5);
 
         this.cameras.main.setZoom(4);
