@@ -5,6 +5,7 @@ import {escenaLobby} from './escenaLobby.js';
 
 export class escenaMenu1 extends Phaser.Scene{
     constructor(){
+        //Escena Menu principal
         super({key:"menu1", active:false});
     }
     preload()

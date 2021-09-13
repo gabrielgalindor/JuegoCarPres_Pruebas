@@ -6,6 +6,7 @@ import {escenaLobby} from './escenaLobby.js';
 
 export class escenaIntro extends Phaser.Scene{
     constructor(){
+        //Escena Presentacion
         super({key:"intro", active:true});
         this.yellowbot = 0xFCCE1A;
     }
