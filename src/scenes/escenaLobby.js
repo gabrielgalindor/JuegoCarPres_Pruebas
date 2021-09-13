@@ -1,6 +1,6 @@
-class escenaLobby extends Phaser.Scene{
+export class escenaLobby extends Phaser.Scene{
     constructor(){
-        super({key:"Lobby", active:true});
+        super({key:"Lobby", active:false});
     }
     preload()
     {
