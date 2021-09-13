@@ -3,6 +3,7 @@ import {escenaIntro} from './scenes/escenaPresentacion.js';
 import {escenaLobby} from './scenes/escenaLobby.js';
 import {fwidth, fheight, centerw, centerh} from './ENV.js';
 
+//Configuracion juego Phaser 3
 
 const config ={
 	width: fwidth,
