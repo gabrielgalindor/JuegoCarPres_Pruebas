@@ -6,6 +6,7 @@ import {escenaLobby} from './escenaLobby.js';
 export class escenaMenu1 extends Phaser.Scene{
     constructor(){
         super({key:"menu1", active:false});
+        this.temporalScenePoint= "RutaCorrupsol";
     }
     preload()
     {
@@ -31,15 +32,15 @@ export class escenaMenu1 extends Phaser.Scene{
         //creación de botones
         this.modoHistoria = this.add.image(1000, 250, 'btn1-menu1').setInteractive();
         this.modoHistoria.on('pointerdown', function (event) {
-            this.scene.start("Lobby");
+            this.scene.start( this.temporalScenePoint);
         }, this);
         this.modoMultiplayer = this.add.image(1000, 350, 'btn2-menu1').setInteractive();
         this.modoMultiplayer.on('pointerdown', function (event) {
-            this.scene.start("Lobby");
+            this.scene.start( this.temporalScenePoint);
         }, this);
         this.settings = this.add.image(1000, 450, 'btn3-menu1').setInteractive();
         this.settings.on('pointerdown', function (event) {
-            this.scene.start("Lobby");
+            this.scene.start( this.temporalScenePoint);
         }, this);
 
     }

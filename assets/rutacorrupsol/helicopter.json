@@ -1,0 +1,120 @@
+{
+	"textures": [
+		{
+			"image": "helicoptersp.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 2700,
+				"h": 312
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "s0.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 900,
+						"h": 311
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 900,
+						"h": 311
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 900,
+						"h": 311
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				{
+					"filename": "s1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 900,
+						"h": 311
+					},
+					"spriteSourceSize": {
+						"x": 901,
+						"y": 0,
+						"w": 900,
+						"h": 311
+					},
+					"frame": {
+						"x": 901,
+						"y": 1,
+						"w": 900,
+						"h": 311
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				{
+					"filename": "s2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 900,
+						"h": 311
+					},
+					"spriteSourceSize": {
+						"x": 1801,
+						"y": 0,
+						"w": 900,
+						"h": 311
+					},
+					"frame": {
+						"x": 1801,
+						"y": 1,
+						"w": 900,
+						"h": 311
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				{
+					"filename": "s3.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 900,
+						"h": 311
+					},
+					"spriteSourceSize": {
+						"x": 901,
+						"y": 0,
+						"w": 900,
+						"h": 311
+					},
+					"frame": {
+						"x": 901,
+						"y": 1,
+						"w": 900,
+						"h": 311
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:ee78cacc38551445f4ac068d5f89f5bf:6cc19705e7b39b96deecddd16df19941:21e37d97209970b57444d06f2d32a983$"
+	}
+}

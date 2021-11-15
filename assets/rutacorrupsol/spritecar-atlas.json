@@ -1,0 +1,224 @@
+{
+	"textures": [
+		{
+			"image": "carretera.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 200,
+				"h": 178
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "carsprite1-1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 100,
+						"h": 59
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 100,
+						"h": 59
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 100,
+						"h": 59
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				{
+					"filename": "carsprite1-2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 100,
+						"h": 59
+					},
+					"spriteSourceSize": {
+						"x": 95,
+						"y": 0,
+						"w": 100,
+						"h": 59
+					},
+					"frame": {
+						"x": 95,
+						"y": 0,
+						"w": 100,
+						"h": 59
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				},
+
+
+				{
+					"filename": "carsprite2-1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 100,
+						"h": 59
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 68,
+						"w": 100,
+						"h": 59
+					},
+					"frame": {
+						"x": 0,
+						"y": 68,
+						"w": 100,
+						"h": 59
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				{
+					"filename": "carsprite2-2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 100,
+						"h": 59
+					},
+					"spriteSourceSize": {
+						"x": 106,
+						"y": 68,
+						"w": 100,
+						"h": 59
+					},
+					"frame": {
+						"x": 106,
+						"y": 68,
+						"w": 100,
+						"h": 59
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				{
+					"filename": "carsprite2-3.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 100,
+						"h": 59
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 100,
+						"h": 59
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 100,
+						"h": 59
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				},
+
+				{
+					"filename": "carsprite3-1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 100,
+						"h": 59
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 130,
+						"w": 100,
+						"h": 59
+					},
+					"frame": {
+						"x": 0,
+						"y": 130,
+						"w": 100,
+						"h": 59
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				{
+					"filename": "carsprite3-2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 100,
+						"h": 59
+					},
+					"spriteSourceSize": {
+						"x": 106,
+						"y": 130,
+						"w": 100,
+						"h": 59
+					},
+					"frame": {
+						"x": 106,
+						"y": 130,
+						"w": 100,
+						"h": 59
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				{
+					"filename": "carsprite3-3.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 100,
+						"h": 59
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 100,
+						"h": 59
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 100,
+						"h": 59
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				}
+
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:ee78cacc38551445f4ac068d5f89f5bf:6cc19705e7b39b96deecddd16df19941:21e37d97209970b57444d06f2d32a983$"
+	}
+}

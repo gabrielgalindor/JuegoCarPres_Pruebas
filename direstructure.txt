@@ -1,0 +1,12 @@
+Proyecto Pre-beta: Carrera presidencial
+
+-Carrerapresidencia = Carpeta raíz
+-- index.html = Página dónde se muestra el videojuego de pruebas
+-- assets = Carpeta dónde se colocarán todos los archivos de sonido, imagenes y/o textos estáticos
+-----------*nombre de escena= Carpeta que contiene los archivos estáticos que deben llevar el nombre de la escena
+-- node_modules = Son los modulos de Node Js para que funcione el videojuego, estos archivos deben generarse por la línea de comandos npm
+-- src = carpeta para agregar los scripts de Js para el funcionamiento del videojuego
+-----------js = carpeta scripts independientes que pueden simplificar el trabajo de la programación y no están relacionados al funcionamiento de Phaser
+-----------scenes = carpeta que contiene únicamente los scripts de las escenas de phaser
+-----------index.js = script raíz que inicializa el videojuego, se coloca acá para simplificar la ubicación de las escenas
+-----------ENV.js = script que contiene constantes que se usarán en todos los scripts

@@ -1,0 +1,70 @@
+{
+	"textures": [
+		{
+			"image": "carretera-v02.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 1400,
+				"h": 1080
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "cposition1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 1280,
+						"h": 460
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 1280,
+						"h": 460
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 1280,
+						"h": 460
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				{
+					"filename": "cposition2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 1280,
+						"h": 460
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 460,
+						"w": 1280,
+						"h": 460
+					},
+					"frame": {
+						"x": 0,
+						"y": 460,
+						"w": 1280,
+						"h": 460
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:ee78cacc38551445f4ac068d5f89f5bf:6cc19705e7b39b96deecddd16df19941:21e37d97209970b57444d06f2d32a983$"
+	}
+}
