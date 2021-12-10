@@ -18,36 +18,36 @@ export class RutaCorrupsol extends Phaser.Scene{
         this.rightLimit = 900;
         //Puntaje
         this.score = 0;
+        //Oportunidades
+        this.opportunities=7;
+        this.master_method = 0;
+        //Variables que manejan la presentación por 3 secuencias
+        this.update_secuence = 0;
+        this.timer_update = 0;
        
     }
     preload()
     {
         this.load.image('bg-corrupsol', './assets/rutacorrupsol/bg-corrupsol.jpg');
         this.load.atlas('rc-ruta2', './assets/rutacorrupsol/carretera-v02.png','./assets/rutacorrupsol/bg-road-atlas.json');
+        this.load.atlas('rc-palmeras', './assets/rutacorrupsol/palmeras.png','./assets/rutacorrupsol/palmeras.json');
         this.load.atlas('spritecar','./assets/rutacorrupsol/sprite-car.png','./assets/rutacorrupsol/spritecar-atlas.json');
         this.load.image('rc-car', './assets/rutacorrupsol/car-test.png');
         this.load.image('rc-hueco', './assets/rutacorrupsol/hueco.png');
+        this.load.atlas('rc-title', './assets/rutacorrupsol/allframes_rutaCorrupsol.png','./assets/rutacorrupsol/title_rc_anim.json');
         this.load.scenePlugin('Camera3DPlugin', './src/js/camera3d.min.js', 'Camera3DPlugin', 'cameras3d');
 
     }
     create()
     {
+        //Animación de la carretera
         this.background = this.add.tileSprite(centerw,centerh,game.config.width,game.config.height,'bg-corrupsol');
         this.carretera = this.add.sprite(0,centerhroad+5,'rc-ruta2','cposition1.png');
+        this.palmeras = this.add.sprite(-200,centerhroad-200,'rc-palmeras','palm-rc0x.png');
         this.carreteraAnimA = true;
         this.carrteraAnimB = false;
-
-        //Crear el personaje como carro
-        //Set Depth permite manejar las capas
-        this.carcharacter = this.physics.add.sprite(400,590,"spritecar","carsprite1-1.png");
-        this.carcharacter.setScale(2.5,2.5);
-        this.carcharacter.body.setSize(80,20);
-        this.carcharacter.setDepth(3);
-        
-        
-        //Logica de crear las trampas, el elemento0 es el carro de la maquina, elemento1 es el hueco que aparece al azar
-        this.createElement0();
-        this.tryToCreateElement1();
+        //Animación de presentación
+        this.title = this.add.sprite(0,centerh-300,'rc-title','title_rc0x.png');
 
         this.anims.create({
             key:'road-a',
@@ -60,6 +60,94 @@ export class RutaCorrupsol extends Phaser.Scene{
                 end:2
             })
         });
+
+        this.anims.create({
+            key:'title-rc',
+            repeat:-1,
+            frameRate:12,
+            frames:this.anims.generateFrameNames('rc-title',{
+                prefix:'title_rc',
+                suffix:'x.png',
+                start:0,
+                end:7
+            })
+        });
+
+        this.anims.create({
+            key:'palmeras-rc',
+            repeat:-1,
+            frameRate:12,
+            frames:this.anims.generateFrameNames('rc-palmeras',{
+                prefix:'palm-rc',
+                suffix:'x.png',
+                start:0,
+                end:1
+            })
+        });
+
+        this.anims.create({
+            key:'palmeras-rc2',
+            repeat:-1,
+            frameRate:24,
+            frames:this.anims.generateFrameNames('rc-palmeras',{
+                prefix:'palm-rc',
+                suffix:'x.png',
+                start:0,
+                end:1
+            })
+        });
+
+        this.carretera.play({ key: 'road-a', repeat: -1 });
+        this.title.play({key: 'title-rc', repeat: 0});
+        this.palmeras.play({key: 'palmeras-rc', repeat: -1});
+
+    }
+
+    update(time,delta)
+    {        
+        console.log(delta);
+        //Revisa secuencia para ver si ya presentó el título
+        //update_secuence = 0 significa que todavía no ha terminado el tiempo de la presentación
+        if(this.update_secuence == 0)
+        {
+            this.timer_update += delta;
+            //Revisa si ya han pasado 2 segundos (o 2.000 milisegundos)
+            //Para cambiar a la secuencia de pseudocrear
+            if(this.timer_update>=2000)
+            {
+                this.update_secuence=1;
+            }
+        }    
+        
+        if(this.update_secuence==1)
+        {
+            this.title.destroy();
+            this.pseudocreate();
+            this.update_secuence = 2;
+        }
+
+        if(this.update_secuence==2)
+        {
+            this.pseudoupdate(delta);
+        }
+    }
+    //PseudoCreate: Create cicle for gaming
+    // This method goes after the process presentation of the game
+    pseudocreate(){
+        
+        //Crear el personaje como carro
+        //Set Depth permite manejar las capas
+        this.carcharacter = this.physics.add.sprite(400,590,"spritecar","carsprite1-1.png");
+        this.carcharacter.setScale(2.5,2.5);
+        this.carcharacter.body.setSize(80,20);
+        this.carcharacter.setDepth(3);
+        
+        
+        //Logica de crear las trampas, el elemento0 es el carro de la maquina, elemento1 es el hueco que aparece al azar
+        this.createElement0();
+        this.tryToCreateElement1();
+
+       
 
         this.anims.create({
             key:'road-b',
@@ -111,25 +199,31 @@ export class RutaCorrupsol extends Phaser.Scene{
         });
        
 
-        this.carretera.play({ key: 'road-a', repeat: -1 });
+        
         this.carcharacter.play({ key: 'spritecar-a', repeat: -1 });
 
         this.cursor = this.input.keyboard.createCursorKeys();
         //Texto que lleva el tiempo
-        this.textTime = this.add.text(centerw-100, 50, '02:59', { fontFamily: 'Bitwise, "Arial", Times, serif', fontSize: '5rem', color: '#09709e'});
+        this.textTime = this.add.text(centerw-100, 50, '02:59', { fontFamily: 'Bitwise, "Arial", Times, serif', fontSize: '5rem', color: '#ffd147'});
         //Texto que lleva el puntaje
         this.textScore = this.add.text(100, 50, '02:59', { fontFamily: 'Bitwise, "Arial", Times, serif', fontSize: '2rem', color: '#ffffff'});
+        this.textOppor = this.add.text(centerw + 200, 50, 'Vidas: 7', { fontFamily: 'Bitwise, "Arial", Times, serif', fontSize: '2rem', color: '#ffffff'});
         //Variables del tiempo
         this.minutes = 2;
         this.seconds = 59;
         this.miliseconds = 1000;
-    }
 
-    update(time,delta)
-    {        
-        console.log(delta);
+    }
+    //-------------------------------------------
+    //-------End PseudoCreate Method -----------
+
+    
+    //PseudoUpdate: Normal cicle Update for gaming 
+    // This method goes after the process presentation of the game and after PseudoCreate
+    pseudoupdate(delta){
+        //Logica de pseudocamaras
         this.camera3Deffect();
-        
+
         this.controlCar();
         //Logica de manejar el cronometro del juego
         this.miliseconds -= delta;
@@ -139,10 +233,9 @@ export class RutaCorrupsol extends Phaser.Scene{
         //Revisa si tiene que crear el hueco, porque se tiene que hacer al AZAR
         this.tryToCreateElement1();
         //fin del ciclo update
-        
-        
     }
 
+    //Camera 3D methods
     camera3Deffect(){
         this.camera3D_element0();
         //Revisa si el hueco fue creado para hacer un efecto de 3D
@@ -229,6 +322,7 @@ export class RutaCorrupsol extends Phaser.Scene{
             this.elemento1,
              function(){
                 this.scoreElement1= -50;
+                this.opportunities -=1;
                  this.defeatLogic();
              },
              null,
@@ -314,6 +408,7 @@ export class RutaCorrupsol extends Phaser.Scene{
             if(this.speed>2 && this.carreteraAnimA)
             {
                 this.carretera.play({ key: 'road-b', repeat: -1 });
+                this.palmeras.play({key: 'palmeras-rc2', repeat: -1})
                 this.carreteraAnimA = false;
                 this.carreteraAnimB = true;
             }
@@ -321,6 +416,7 @@ export class RutaCorrupsol extends Phaser.Scene{
             if(this.speed<1.5 && this.carreteraAnimB)
             {
                 this.carretera.play({ key: 'road-a', repeat: -1 });
+                this.palmeras.play({key: 'palmeras-rc', repeat: -1})
                 this.carreteraAnimA = true;
                 this.carreteraAnimB = false;
             }

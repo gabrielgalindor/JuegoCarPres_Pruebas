@@ -3,6 +3,7 @@ import {escenaIntro} from './scenes/escenaPresentacion.js';
 import {escenaLobby} from './scenes/escenaLobby.js';
 import {RutaCorrupsol} from './scenes/RutaCorrupSol.js'
 import {fwidth, fheight, centerw, centerh} from './ENV.js';
+import {BallenasChoko} from './scenes/BallenasChoko.js';
 
 
 const config ={
@@ -12,9 +13,9 @@ const config ={
 	type: Phaser.AUTO,
 	physics: {
         default: 'arcade',
-        arcade: { debug: true }
+        arcade: { debug: false }
     },
-	scene:[escenaIntro,RutaCorrupsol, escenaLobby,escenaMenu1]
+	scene:[escenaIntro,BallenasChoko,RutaCorrupsol, escenaLobby,escenaMenu1]
 }
 
 
