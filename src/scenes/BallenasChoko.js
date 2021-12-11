@@ -32,6 +32,12 @@ export class BallenasChoko extends Phaser.Scene{
 
     }
 
+    init(data)
+    {
+        this.votos = data.votos;
+        this.niveles_dictonary = data.niveles_dictonary;
+    }
+
     preload()
     {
         this.load.image('bg-ballenaschoco','./assets/ballenaschoco/background.jpg');
@@ -104,7 +110,7 @@ export class BallenasChoko extends Phaser.Scene{
         this.textScore = this.add.text(100, 50, 'Puntaje: 0', { fontFamily: 'Bitwise, "Arial", Times, serif', fontSize: '2rem', color: '#ffffff', stroke: "#0000fa", strokeThickness :2});
         
         //Variables del tiempo
-        this.minutes = 2;
+        this.minutes = 1;
         this.seconds = 59;
         this.miliseconds = 1000;
 
@@ -229,6 +235,15 @@ export class BallenasChoko extends Phaser.Scene{
                 this.seconds =59;
             }
            
+            if(this.minutes <= 0 && this.seconds <= 0)
+            {
+                //Secuencia de game over
+                // const enviar_data es lo que debe recibir cada escena para iniciar
+                this.niveles_dictonary['nivel2'] = false;
+                this.votos+=this.score;
+                const enviar_data =  {votos: this.votos, niveles_dictonary: this.niveles_dictonary};
+                this.scene.start('Status',enviar_data);
+            }
 
             //Se coloca este condicional con el fin de cuando los segundos sean
             // menor a 10 se muestre un 0 al lado de los segundos
