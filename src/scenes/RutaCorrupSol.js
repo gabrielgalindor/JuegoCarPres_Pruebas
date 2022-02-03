@@ -216,7 +216,7 @@ export class RutaCorrupsol extends Phaser.Scene{
         this.textScore = this.add.text(100, 50, '02:59', { fontFamily: 'Bitwise, "Arial", Times, serif', fontSize: '2rem', color: '#ffffff'});
         this.textOppor = this.add.text(centerw + 200, 50, 'Vidas: 7', { fontFamily: 'Bitwise, "Arial", Times, serif', fontSize: '2rem', color: '#ffffff'});
         //Variables del tiempo
-        this.minutes = 1;
+        this.minutes = 0;
         this.seconds = 59;
         this.miliseconds = 1000;
 
