@@ -22,7 +22,7 @@ export class RutaCorrupsol extends Phaser.Scene{
         this.opportunities=7;
         this.master_method = 0;
         //Variables que manejan la presentación por 3 secuencias
-        this.update_secuence = 0;
+        this.update_secuence = 1;
         this.timer_update = 0;
        
     }
