@@ -3,6 +3,7 @@ import {escenaIntro} from './scenes/escenaPresentacion.js';
 import {escenaLobby} from './scenes/escenaLobby.js';
 import {RutaCorrupsol} from './scenes/RutaCorrupSol.js';
 import {BallenasChoko} from './scenes/BallenasChoko.js';
+import {escena_personaje} from './scenes/choiceCharacter.js';
 import {Status} from './scenes/status.js';
 import {fwidth, fheight, centerw, centerh} from './ENV.js';
 
@@ -18,7 +19,7 @@ const config ={
         default: 'arcade',
         arcade: { debug: false }
     },
-	scene:[escenaIntro,BallenasChoko,RutaCorrupsol, escenaLobby, Status,escenaMenu1]
+	scene:[escena_personaje]
 }
 
 

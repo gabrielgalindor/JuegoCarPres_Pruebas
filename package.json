@@ -1,0 +1,24 @@
+{
+  "name": "juegocarpres_pruebas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "phaser": "^3.54.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielgalindor/JuegoCarPres_Pruebas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabrielgalindor/JuegoCarPres_Pruebas/issues"
+  },
+  "homepage": "https://github.com/gabrielgalindor/JuegoCarPres_Pruebas#readme"
+}
