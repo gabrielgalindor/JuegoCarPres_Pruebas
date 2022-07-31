@@ -8,7 +8,9 @@ import {draw_personaje} from './scenes/choiceCharacter.js';
 import {Status} from './scenes/status.js';
 import {fwidth, fheight, centerw, centerh} from './ENV.js';
 
-
+/* 
+	Main project
+*/
 
 
 const config ={
