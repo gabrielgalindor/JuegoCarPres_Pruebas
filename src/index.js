@@ -14,7 +14,11 @@ const config ={
         default: 'arcade',
         arcade: { debug: true }
     },
+<<<<<<< refs/remotes/origin/develop
 	scene:[escenaIntro,escenaLobby,escenaMenu1]
+=======
+	scene:[RutaCorrupsol]
+>>>>>>> local
 }
 
 
