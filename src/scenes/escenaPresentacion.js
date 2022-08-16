@@ -16,15 +16,6 @@ export class escenaIntro extends Phaser.Scene{
         this.load.image('decorador-1', './assets/intro/decorador1.png');
         this.load.image('logo', './assets/intro/logo1.png');
         
-        var progress = this.add.graphics();
-        this.load.on('progress', function (value) {
-
-            progress.clear();
-            progress.fillStyle(this.yellowbot, 1);
-            progress.fillRect(0, 270, 800 * value, 60);
-    
-        });
-        
 
         this.load.video('intro', './assets/intro/intro_carrera_presidencial.mp4', 'loadeddata', true, true);
     }
@@ -117,7 +108,7 @@ export class escenaIntro extends Phaser.Scene{
         if(this.changeScene)
         {
             
-            this.scene.start("menu1");
+            this.scene.start("profileload");
         }
 
         //Proceso del vídeo
@@ -129,7 +120,7 @@ export class escenaIntro extends Phaser.Scene{
             //console.log(this.videoDuration);
             if(this.videoDuration>750)
             {
-                this.scene.start("menu1");
+                this.scene.start("profileload");
             }
         }
 
