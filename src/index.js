@@ -15,15 +15,7 @@ const config ={
         default: 'arcade',
         arcade: { debug: true }
     },
-<<<<<<< HEAD
 	scene:[escenaIntro,escenaLobby,escenaMenu1, ProfileLoad]
-=======
-<<<<<<< refs/remotes/origin/develop
-	scene:[escenaIntro,escenaLobby,escenaMenu1]
-=======
-	scene:[RutaCorrupsol]
->>>>>>> local
->>>>>>> 02755d393627c36c861ddb095095bb185b5e0314
 }
 
 
